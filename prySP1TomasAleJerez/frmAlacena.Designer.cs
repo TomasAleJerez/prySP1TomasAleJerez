@@ -31,19 +31,18 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblLugar = new System.Windows.Forms.Label();
+            this.lblProducto = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lstCantidad = new System.Windows.Forms.ComboBox();
-            this.lstLugar = new System.Windows.Forms.ComboBox();
-            this.lstAlimento = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cboCantidad = new System.Windows.Forms.ComboBox();
+            this.cboLugar = new System.Windows.Forms.ComboBox();
+            this.cboProducto = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.cboAlmacenado = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -56,7 +55,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(639, 384);
+            this.groupBox1.Size = new System.Drawing.Size(639, 410);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control de Alimentos";
@@ -64,13 +63,13 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.lstAlimento);
-            this.groupBox2.Controls.Add(this.lstLugar);
-            this.groupBox2.Controls.Add(this.lstCantidad);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.btnGuardar);
+            this.groupBox2.Controls.Add(this.cboProducto);
+            this.groupBox2.Controls.Add(this.cboLugar);
+            this.groupBox2.Controls.Add(this.cboCantidad);
+            this.groupBox2.Controls.Add(this.lblCantidad);
+            this.groupBox2.Controls.Add(this.lblProducto);
+            this.groupBox2.Controls.Add(this.lblLugar);
             this.groupBox2.Location = new System.Drawing.Point(25, 40);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(578, 212);
@@ -80,44 +79,43 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox4);
-            this.groupBox3.Controls.Add(this.comboBox5);
+            this.groupBox3.Controls.Add(this.cboAlmacenado);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(25, 258);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(578, 101);
+            this.groupBox3.Size = new System.Drawing.Size(578, 120);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Almacenado";
             // 
-            // label1
+            // lblLugar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lugar";
+            this.lblLugar.AutoSize = true;
+            this.lblLugar.Location = new System.Drawing.Point(38, 62);
+            this.lblLugar.Name = "lblLugar";
+            this.lblLugar.Size = new System.Drawing.Size(55, 20);
+            this.lblLugar.TabIndex = 0;
+            this.lblLugar.Text = "Lugar";
             // 
-            // label2
+            // lblProducto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(207, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Alimento";
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Location = new System.Drawing.Point(207, 62);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(81, 20);
+            this.lblProducto.TabIndex = 1;
+            this.lblProducto.Text = "Producto";
             // 
-            // label3
+            // lblCantidad
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(377, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cantidad";
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(377, 62);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(81, 20);
+            this.lblCantidad.TabIndex = 2;
+            this.lblCantidad.Text = "Cantidad";
             // 
             // label4
             // 
@@ -146,54 +144,53 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Alimento";
             // 
-            // lstCantidad
+            // cboCantidad
             // 
-            this.lstCantidad.FormattingEnabled = true;
-            this.lstCantidad.Location = new System.Drawing.Point(358, 93);
-            this.lstCantidad.Name = "lstCantidad";
-            this.lstCantidad.Size = new System.Drawing.Size(121, 28);
-            this.lstCantidad.TabIndex = 3;
+            this.cboCantidad.FormattingEnabled = true;
+            this.cboCantidad.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cboCantidad.Location = new System.Drawing.Point(358, 93);
+            this.cboCantidad.Name = "cboCantidad";
+            this.cboCantidad.Size = new System.Drawing.Size(121, 28);
+            this.cboCantidad.TabIndex = 3;
             // 
-            // lstLugar
+            // cboLugar
             // 
-            this.lstLugar.FormattingEnabled = true;
-            this.lstLugar.Location = new System.Drawing.Point(20, 93);
-            this.lstLugar.Name = "lstLugar";
-            this.lstLugar.Size = new System.Drawing.Size(121, 28);
-            this.lstLugar.TabIndex = 4;
+            this.cboLugar.FormattingEnabled = true;
+            this.cboLugar.Items.AddRange(new object[] {
+            "Heladera",
+            "Alacena",
+            "Limpieza"});
+            this.cboLugar.Location = new System.Drawing.Point(20, 93);
+            this.cboLugar.Name = "cboLugar";
+            this.cboLugar.Size = new System.Drawing.Size(121, 28);
+            this.cboLugar.TabIndex = 4;
             // 
-            // lstAlimento
+            // cboProducto
             // 
-            this.lstAlimento.FormattingEnabled = true;
-            this.lstAlimento.Location = new System.Drawing.Point(185, 93);
-            this.lstAlimento.Name = "lstAlimento";
-            this.lstAlimento.Size = new System.Drawing.Size(121, 28);
-            this.lstAlimento.TabIndex = 5;
+            this.cboProducto.FormattingEnabled = true;
+            this.cboProducto.Location = new System.Drawing.Point(185, 93);
+            this.cboProducto.Name = "cboProducto";
+            this.cboProducto.Size = new System.Drawing.Size(121, 28);
+            this.cboProducto.TabIndex = 5;
             // 
-            // comboBox4
+            // btnGuardar
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(6, 67);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 28);
-            this.comboBox4.TabIndex = 6;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(185, 67);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 28);
-            this.comboBox5.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(447, 152);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 33);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(447, 152);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(93, 33);
+            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -204,14 +201,23 @@
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // cboAlmacenado
+            // 
+            this.cboAlmacenado.FormattingEnabled = true;
+            this.cboAlmacenado.Location = new System.Drawing.Point(20, 71);
+            this.cboAlmacenado.Name = "cboAlmacenado";
+            this.cboAlmacenado.Size = new System.Drawing.Size(459, 28);
+            this.cboAlmacenado.TabIndex = 7;
+            // 
             // frmAlacena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 417);
+            this.ClientSize = new System.Drawing.Size(684, 449);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAlacena";
             this.Text = "Alacena";
+            this.Load += new System.EventHandler(this.frmAlacena_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -229,15 +235,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Label lblProducto;
+        private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox lstAlimento;
-        private System.Windows.Forms.ComboBox lstLugar;
-        private System.Windows.Forms.ComboBox lstCantidad;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ComboBox cboProducto;
+        private System.Windows.Forms.ComboBox cboLugar;
+        private System.Windows.Forms.ComboBox cboCantidad;
+        private System.Windows.Forms.ComboBox cboAlmacenado;
     }
 }

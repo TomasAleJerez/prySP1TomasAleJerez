@@ -16,5 +16,18 @@ namespace prySP1TomasAleJerez
         {
             InitializeComponent();
         }
+
+        private void frmAlacena_Load(object sender, EventArgs e)
+        {
+            cboProducto.Items.Add("Azucar");
+            cboProducto.Items.Add("Te");
+            cboProducto.Items.Add("Arroz");
+            cboProducto.Items.Add("Detergente");
+            cboProducto.Items.Add("Trapo");
+            cboProducto.Items.Add("Esponja");
+            cboProducto.Items.Add("Cerveza");
+
+            
+        }
     }
 }
