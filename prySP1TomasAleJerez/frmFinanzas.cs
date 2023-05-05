@@ -34,9 +34,9 @@ namespace prySP1TomasAleJerez
             var alquiler= Convert.ToDecimal(txtAlquiler.Text);
             var impuesto = Convert.ToDecimal(txtImpuestos.Text);
             var comida= Convert.ToDecimal(txtComida.Text);
-            var calculo = deposito− alquiler− impuesto− comida;
+            var calculo = deposito- alquiler- impuesto- comida;
             txtMonto.Text = calculo.ToString();
-
+            //falta dar resultado
 
         }
     }

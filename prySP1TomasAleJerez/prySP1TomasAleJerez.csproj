@@ -66,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAlacena.resx">
+      <DependentUpon>frmAlacena.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFinanzas.resx">
       <DependentUpon>frmFinanzas.cs</DependentUpon>
     </EmbeddedResource>

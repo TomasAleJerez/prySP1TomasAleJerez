@@ -39,11 +39,12 @@
             this.lblImpuestos = new System.Windows.Forms.Label();
             this.lblAlquiler = new System.Windows.Forms.Label();
             this.mrcGastosVarios = new System.Windows.Forms.GroupBox();
-            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.Monto = new System.Windows.Forms.TextBox();
             this.lblMonto = new System.Windows.Forms.Label();
             this.mrcIngreso = new System.Windows.Forms.GroupBox();
             this.txtDeposito = new System.Windows.Forms.TextBox();
             this.lblDeposito = new System.Windows.Forms.Label();
+            this.txtMonto = new System.Windows.Forms.Label();
             this.mrcFinanzas.SuspendLayout();
             this.mrcGastosFijo.SuspendLayout();
             this.mrcGastosVarios.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             // mrcFinanzas
             // 
+            this.mrcFinanzas.Controls.Add(this.txtMonto);
             this.mrcFinanzas.Controls.Add(this.cmdGrabar);
             this.mrcFinanzas.Controls.Add(this.btnCancelar);
             this.mrcFinanzas.Controls.Add(this.mrcGastosFijo);
@@ -147,7 +149,7 @@
             // 
             // mrcGastosVarios
             // 
-            this.mrcGastosVarios.Controls.Add(this.txtMonto);
+            this.mrcGastosVarios.Controls.Add(this.Monto);
             this.mrcGastosVarios.Controls.Add(this.lblMonto);
             this.mrcGastosVarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcGastosVarios.Location = new System.Drawing.Point(6, 385);
@@ -157,12 +159,12 @@
             this.mrcGastosVarios.TabStop = false;
             this.mrcGastosVarios.Text = "Gastos Varios";
             // 
-            // txtMonto
+            // Monto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(125, 41);
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(100, 22);
-            this.txtMonto.TabIndex = 2;
+            this.Monto.Location = new System.Drawing.Point(125, 41);
+            this.Monto.Name = "Monto";
+            this.Monto.Size = new System.Drawing.Size(100, 22);
+            this.Monto.TabIndex = 2;
             // 
             // lblMonto
             // 
@@ -201,15 +203,26 @@
             this.lblDeposito.TabIndex = 0;
             this.lblDeposito.Text = "Deposito";
             // 
-            // Finanzas
+            // txtMonto
+            // 
+            this.txtMonto.AutoSize = true;
+            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Location = new System.Drawing.Point(128, 497);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(43, 16);
+            this.txtMonto.TabIndex = 1;
+            this.txtMonto.Text = "Total";
+            // 
+            // frmFinanzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 601);
             this.Controls.Add(this.mrcFinanzas);
-            this.Name = "Finanzas";
+            this.Name = "frmFinanzas";
             this.Text = "Gestion de gastos mensuales";
             this.mrcFinanzas.ResumeLayout(false);
+            this.mrcFinanzas.PerformLayout();
             this.mrcGastosFijo.ResumeLayout(false);
             this.mrcGastosFijo.PerformLayout();
             this.mrcGastosVarios.ResumeLayout(false);
@@ -236,8 +249,9 @@
         private System.Windows.Forms.TextBox txtComida;
         private System.Windows.Forms.TextBox txtAlquiler;
         private System.Windows.Forms.TextBox txtImpuestos;
-        private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.TextBox Monto;
         private System.Windows.Forms.TextBox txtDeposito;
+        private System.Windows.Forms.Label txtMonto;
     }
 }
 
